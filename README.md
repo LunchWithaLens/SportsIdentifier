@@ -1,7 +1,7 @@
-"# sports-classifier-fastai" 
+# sports-classifier-fastai 
 The code was based on the example at https://github.com/shankarj67/Water-classifier-fastai and some of my changes were due to fastai 24 -> 32, other maybe for Azure.
 
-##Azure Deployment
+## Azure Deployment
 
 My deployment steps were based on this Microsoft article https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-python
 
@@ -26,3 +26,5 @@ Once I had the Url returned from the previous command for the Git endpoint I cou
   git push azure master
   
 In the Azure Portal for the Web App I could review the application logs to track down any issues.
+
+I later migrated to a cheaper AppService - B2, whihc worked pretty much as well - maybe a little slower
