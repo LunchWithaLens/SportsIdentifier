@@ -24,8 +24,8 @@ app = Flask(__name__)
 
 
 path = Path("path")
-classes =  ['aussie','baseball','cricket','football','gaelic','hockey','lacrosse','other','rugby','soccer']
-sports = ['Australian Rules Football', 'Baseball', 'Cricket', 'American Football', 'Gaelic Football', 'Field Hockey', 'Lacrosse', 'not a sport','Rugby', 'Soccer']
+classes =  ['aussie','baseball','basketball','camogie','cricket','football','gaelic','golf','hockey','hurling','icehockey','lacrosse','other','quidditch','rugby','soccer','tennis']
+sports = ['Australian Rules Football', 'Baseball', 'Basketball', 'Camogie', 'Cricket', 'American Football', 'Gaelic Football', 'Field Hockey', 'hurling', 'Ice Hockey', 'Lacrosse', 'not a sport','Quidditch', 'Rugby', 'Soccer', 'Tennis']
 data2 = ImageDataBunch.single_from_classes(path, classes, tfms=get_transforms(), size=448).normalize(imagenet_stats)
 learn = create_cnn(data2, models.resnet34)
 learn.load('LargeModel10Own', strict=False, with_opt=False)
